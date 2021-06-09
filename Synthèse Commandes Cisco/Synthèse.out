@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Les Routeurs}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Commandes de bases}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Effacer la configuration d'un routeur}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Commandes interfaces}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Cr\351er des routes}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Logging Synchronous}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{S\351curit\351}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.7}{Etablir une connection SSH}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.8}{Configuration RIP}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.9}{IPV6}{section.1}% 10
+\BOOKMARK [3][-]{subsubsection.1.9.1}{Routage statique en IPV6}{subsection.1.9}% 11
+\BOOKMARK [3][-]{subsubsection.1.9.2}{RIPng}{subsection.1.9}% 12
+\BOOKMARK [1][-]{section.2}{Les Switchs}{}% 13
+\BOOKMARK [2][-]{subsection.2.1}{Les commandes de bases}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.2}{Supprimer la configuration d'un Switch}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.3}{Etablir une connection SSH}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.4}{S\351curit\351}{section.2}% 17

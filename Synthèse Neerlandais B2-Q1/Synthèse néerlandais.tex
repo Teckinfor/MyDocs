@@ -1,0 +1,1009 @@
+\documentclass[a4paper]{article}
+
+\usepackage{lmodern}
+
+%% Language and font encodings
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{pifont}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{fourier-orns}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+%\renewcommand{\thefootnote}{\*}
+\pagestyle{fancy} 
+\setcounter{tocdepth}{5}
+\usepackage{array}
+
+
+
+%% Tikz stuff
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows}
+\tikzstyle{incolore} = [rectangle, rounded corners, draw=black, minimum height=1cm, minimum width=3cm, text width=3cm, text centered]
+\usepackage{float}
+
+\usepackage{makecell}
+\usepackage{libertine}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+
+
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{} 
+\fancyhead[L]{}
+\fancyhead[R]{\footnotesize{\leftmark}}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{} 
+\fancyhead[L]{}
+\fancyfoot[R]{\thepage}
+
+\definecolor{Zgris}{rgb}{0.87,0.85,0.85}
+
+\usepackage{eso-pic,graphicx}
+\usepackage{xcolor}
+\newcommand{\bgimg}[1]{
+\AddToShipoutPicture
+   {
+      \put(\LenToUnit{0 cm},\LenToUnit{0 cm})
+      {
+            \includegraphics[width=\paperwidth,height=\paperheight]{#1} 
+      }
+   }
+}
+
+
+\begin{document}
+
+
+%%\bgimg{Image_15.jpg}
+
+
+
+
+
+  \begin{titlepage}
+    \begin{sffamily}
+    \begin{center}
+      \textnormal{}\\[6.5cm]
+      % Upper part of the page. The '~' is needed because \\
+      % only works if a paragraph has started.
+      % Title
+      \HRule \\[0.4cm]
+      { \Huge \bfseries Synthèse\\ Neerlandais B2-Q1\\ [0.4cm] }
+      \HRule \\[3cm]
+      \Large
+      Deuxième Bloc\\
+      Sécurité des systèmes\\
+      Année académique 2020-2021\\[0.2cm]
+      \emph{Rédigé par Sénéchal Julien}
+      \vfill
+      % Bottom of the page
+      {\large 24 Décembre 2020}
+    \end{center}
+    \end{sffamily}
+  \end{titlepage}
+
+\section{Temps primitif}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Tout temps primitif se termine par \emph{EN} au participe passé
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      être assis & zitten & zat/zaten & gezeten\\
+      \hline
+      mettre & zetten & zette & gezet\\
+      \hline
+      s'allonger & ligten & lag/lagen & gelegen\\
+      \hline
+      poser & legden & legde & gelegd\\
+      \hline
+      voir & zien & zag/zagen & gezien\\
+      \hline
+      dire & zeggen & zei/zeiden & gezegd\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item IJ - EE - ExEE
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      comprendre & begrijpen & begreep/begrepen & begrepen\\
+      \hline
+      mordre & bijten & beet/beten & gebeten\\
+      \hline
+      paraître & (b)lijken & (b)leek/(b)leken & ge(b)leken\\
+      \hline
+      rester & blijven & bleef/bleven & gebleven\\
+      \hline
+      regarder & kijken & keek/keken & gekeken\\
+      \hline
+      souffrir de & lijen aan & leed/leden & geleden\\
+      \hline
+      Rouler & rijden & reed/reden & gereden\\
+      \hline
+      Sembler/Briller & Schijnen & scheen/schenen & geschenen\\
+      \hline
+      ecrire & schrijven & schreef/schreven & geschreven\\
+      \hline
+      couper & snijden & sneed/sneden & gesneden\\
+      \hline
+      augmenter & stijgen & steeg/stegen & gestegen\\
+      \hline
+      etc... & etc... & etc... & etc...\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item IE - OO - OxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      offrir & bieden & bood/boden & geboden\\
+      \hline
+      profiter & genieten & genoot/genoten & genoten\\
+      \hline
+      mentir & liegen & loog/logen & gelogen\\
+      \hline
+      interdire & verbieden & verbood/verboden & verboden\\
+      \hline
+      perdre & verliezen & verloor/verloren & verloren\\
+      \hline
+      voler & vliegen & vloog/vlogen & gevlogen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item UI - OO - OxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      décider & besluiten & besloot/besloten & besloten\\
+      \hline
+      sentir & ruiken & rook/roken & geroken\\
+      \hline
+      fermer & sluiten & sloot/sloten & gesloten\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item I - O - OxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      commencer & beginnen & begon/begonnen & begonnen\\
+      \hline
+      lier & binden & bond/bonden & gebonden\\
+      \hline
+      boire & drinken & dronk/dronken & gedronken\\
+      \hline
+      trouver & vinden & vond & gevonden\\
+      \hline
+      gagner & winnen & won/wonnen & gewonnen\\
+      \hline
+      chanter & zingen & zong/zongen & gezongen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item E - O - OxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      toucher(atteindre) & treffen & trof/troffen & getroffen\\
+      \hline
+      tirer & trekken & trok/trokken & getrokken\\
+      \hline
+      partir & vertrekken & vetrok/vertrokken & vertrokken\\
+      \hline
+      envoyer & zenden & zond/zonden & gezonden\\
+      \hline
+      nager & zwemmen & zwom/zwommen & gezwommen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item E - IE - O
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      aider & helpen & hielp/hielpen0 & geholpen\\
+      \hline
+      mourir & sterven & stierf/stierven & gestorven\\
+      \hline
+      jeter & werpen & wierp/wierpen & geworpen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item EE - A/AA - OxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      casser & breken & brak/braken & gebroken\\
+      \hline
+      voler(dérober) & stelen & stal/stalen & gestolen\\
+      \hline
+      parler & spreken & sprak/spraken & gesproken\\
+      \hline
+      prendre & nemen & nam/namen & genamen\\
+      \hline
+      peser (exception) & wegen & woog/wogen & gewogen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item EE - A/AA - ExEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      donner & geven & gaf/gaven & gegeven\\
+      \hline
+      manger & eten & at/aten & gegeten\\
+      \hline
+      oublier & vergeten & vergat/vergaten & vergeten\\
+      \hline
+      lire & lezen & las/lazen & gelezen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item AA - OE - AxEN (ATTENTION AUX EXCEPTIONS)
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      porter & dragen & droeg/droegen & gedragen\\
+      \hline
+      demander & vragen & vroeg/vroegen & GEVRAAGD\\
+      \hline
+      frapper & slaan & sloeg/sloegen & geslagen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item AA - IE - AxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      laisser & laten & liet/lieten & gelaten\\
+      \hline
+      quitter & verlaten & verliet/verlieten & verlaten\\
+      \hline
+      dormir & slapen & sliep/sliepen & geslapen\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item A - AxTE - AxEN
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      rire & lachen & lachte/lachten & gelachen\\
+      \hline
+      laver & wassen & waste/wasten & gewassen\\
+      \hline
+      cuire & bakken & bakte/bakten & gebakken\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item CHT
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      chercher & zoeken & zocht & gezocht\\
+      \hline
+      se battre & vechten & vocht & gevocht\\
+      \hline
+      apporter & brengen & bracht & gebracht\\
+      \hline
+      penser & denken & dacht & gedacht\\
+      \hline
+      acheter & kopen & kocht/kochten & gekocht\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item Les vrais irréguliers
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Français} & \textbf{Verbe} & \textbf{Imparfait} & \textbf{Participe passé}\\
+      \hline
+      faire & doen & deed/deden & gedaan\\
+      \hline
+      aller & gaan & ging/gingen & gegaan\\
+      \hline
+      venir & komen & kwam/kwamen & gekomen\\
+      \hline
+      avoir & hebben & had/hadden & gehad\\
+      \hline
+      être & zijn & was/waren & geweest\\
+      \hline
+      pouvoir (capacité) & kunnen & kon/konden & gekund\\
+      \hline
+      pouvoir (autorisation) & mogen &  mocht/mochten & gemogen\\
+      \hline
+      devoir & moeten & moest/moesten & gemoeten\\
+      \hline
+      courir & lopen & liep/liepen & gelopen\\
+      \hline
+      crier (appeller quelqu'un)& roepen & riep/riepen & geroepen\\
+      \hline
+      être debout & staan & stond/stonden & gestaan\\
+      \hline
+      tomber & vallen & viel/vielen & gevallen\\
+      \hline
+      savoir & weten & wist/wisten & geweten\\
+      \hline
+      devenir & worden &  werd/werden & geworden\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+  \item Méthode pour essayer de se souvenir d'un verbe en Néerlandais : Passer par l'anglais
+  \begin{itemize}
+    \item find / vinden - found / vond - found / gevonden
+    \item I -> IJ : ride / rijden
+    \item OUGHT -> ACHT : brought / bracht
+    \item etc...
+  \end{itemize}
+\end{itemize}
+
+\section{Grammaire}
+\subsection{Imparfait}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Singulier
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item RADICAL + DE
+  \end{itemize}
+  \item Pluriel
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item RADICAL + DEN
+  \end{itemize}
+  \item Exemples
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Horen (entendre)
+    \begin{itemize}
+      \item Ik hoorde
+      \item We hoorden
+    \end{itemize}
+    \item Reizen (voyager)
+    \begin{itemize}
+      \item Ik reisde
+      \item We reisden
+    \end{itemize}
+  \end{itemize}
+  \item Exceptions
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Si le radical (avant de le modifier, par exemple z -> s) se fini par "F K P S T C" (\textbf{F}ran\textbf{K}lin \textbf{P}rend \textbf{S}on \textbf{T}hé \textbf{C}haud), alors la terminaison sera TE (sing.) et TEN (pluriel)
+    \item Exemple :
+    \begin{itemize}
+      \item Werken (travailler)
+      \begin{itemize}
+        \item Ik wer\textbf{k}te
+        \item We wer\textbf{k}ten
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\subsection{Passé composé}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Auxilaire au présent + participe passé
+  \item Exemples :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Ik heb gegeten
+  \end{itemize}
+  \item Former un participe passé régulié :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item \textbf{GE} devant la racine
+    \item Sauf si commence par :
+    \begin{itemize}
+      \item be
+      \item ge
+      \item er 
+      \item het 
+      \item ont 
+      \item ver 
+    \end{itemize}
+    \item Se termine par \textbf{d} ou \textbf{t} selon les mêmes règles que l'imparfait (ne pas ajouter si fini déjà par ses lettres)
+    \item Si particule séparable, alors le \textbf{ge} se trouve entre la particule et le verbe :
+    \begin{itemize}
+      \item Opbellen --> op\textbf{ge}beld
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\subsection{Futur}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Auxilaire ZULLEN + infintif\\[0.2cm]
+  \begin{tabular}{|c|c|}
+      \hline
+      \textbf{Sujet} & \textbf{Verbe}\\
+      \hline
+      Singulier & zal\\
+      \hline
+      Pluriel & zullen\\
+      \hline
+    \end{tabular}\\
+  \item Exemple :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Hij zal werken
+  \end{itemize}
+\end{itemize}
+
+\subsection{Conditionnel}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Auxilaire ZULLEN à l'imparfait + infintif\\[0.2cm]
+  \begin{tabular}{|c|c|}
+      \hline
+      \textbf{Sujet} & \textbf{Verbe}\\
+      \hline
+      Singulier & zou\\
+      \hline
+      Pluriel & zouden\\
+      \hline
+    \end{tabular}\\
+  \item Exemple :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Als ik zou werken
+  \end{itemize}
+\end{itemize}
+
+\subsection{Accord de l'adjectif}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Adjectif + e
+  \item Sauf si les 3 conditions sont remplies :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item HET
+    \item Singulier
+    \item Indéterminé (een, geen, elk, welk, rien, etc...)
+  \end{itemize}
+\end{itemize}
+
+\subsection{DE / HET}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item HET
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Diminutifs
+    \item Couleurs
+    \item Matière (ou de métaux)
+    \item Langues
+    \item Pays
+    \item Sports
+    \item Noms qui viennent du latin (het museum a part de datum, de geranium, de petroleum)
+    \item Territoire / Propriété
+    \item Noms qui finissent par :
+    \begin{itemize}
+      \item tuig
+      \item sel
+      \item gram 
+      \item ment 
+      \item aal 
+      \item isme 
+      \item je
+    \end{itemize}
+    \item Noms qui commencent par :
+    \begin{itemize}
+      \item be
+      \item ont
+      \item ver 
+      \item ge
+    \end{itemize}
+  \end{itemize}
+  \item DE
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Noms de personnes (de vrouw (sauf : kind, meisje))
+    \item Noms de fleuves, montagnes, plantes, fruits, légumes (sauf pour het fruit)
+    \item Noms de lettres et de chiffres (de vijf)
+    \item Noms de sentiments
+    \item Noms qui finissent par :
+    \begin{itemize}
+      \item ing
+      \item heid
+      \item is
+      \item de
+      \item te
+      \item iek
+      \item ica
+      \item nis
+      \item ie, tie, sie
+      \item st
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Om...te / voor}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Voor
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Suivi d'un nom
+  \end{itemize}
+  \item Om...te
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Suivi d'une action à l'infinitif
+    \item Le om se situe au même endroit que le "pour" en français
+    \item Le te se situe juste avant l'infinitif
+  \end{itemize}
+\end{itemize}
+
+\subsection{Adjectif --> Nom}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item adjectif + heid
+  \item Exemple :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Libre : vrij --> la liberté : de vrijheid
+    \item Difficile : moeilijk --> la difficulté : de moeilijkheid
+    \item Possible : mogelijk --> la possibilité : de mogelijkheid
+    \item Facile : makkelijk --> La facilité : de makkelijkheid
+  \end{itemize}
+\end{itemize}
+
+\subsection{Superlatifs}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Beaucoup = veel
+  \item Très = heel = zeer
+\end{itemize}
+
+\subsection{Verbes Pronominaux - ZICH}
+\begin{tabular}{|c|c|}
+  \hline
+  \textbf{Sujet} & \textbf{Zich}\\
+  \hline
+  ik & me\\
+  \hline
+  je & je\\
+  \hline
+  hij & zich\\
+  \hline
+  we & ons\\
+  \hline
+  jullie & jullie/je\\
+  \hline
+  ze & zich\\
+  \hline
+\end{tabular}\\
+
+\subsection{BE - verbe}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Beluister
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item = luisteren naar
+    \item Ik luister naar musiek = Ik beluister musiek
+  \end{itemize}
+  \item Bespreken
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item = discuter
+  \end{itemize}
+  \item Beschrijven
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item = décrire
+  \end{itemize}
+  \item Beantwoorden
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item = antwoorden op (répondre à)
+    \item Ik antwoord op een vraag = Ik beantwoord een vraag
+  \end{itemize}
+\end{itemize}
+
+\subsection{ON - verbe}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Donne l'inverse du mot
+  \item Exemple :
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Mogelijk = Possible
+    \item \textbf{On}mogelijk = Impossible
+  \end{itemize}
+\end{itemize}
+
+\subsection{Pronoms démonstratif}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item Deze
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item pour des personnes ou choses proches
+    \item Pour les DE-Woord
+  \end{itemize} 
+  \item Die
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item pour des personnes ou choses éloignées
+    \item Pour les DE-Woord
+  \end{itemize} 
+  \item Dit
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item proche
+    \item Pour les HET-Woord
+  \end{itemize} 
+  \item Dat
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item éloigné
+    \item Pour les HET-Woord
+  \end{itemize} 
+\end{itemize}
+
+\subsection{AAN - UIT}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item AAN
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Faire l'action
+    \item Pour les DE-Woord
+    \begin{itemize}
+      \item aankleden = habiller
+    \end{itemize}
+  \end{itemize} 
+  \item UIT
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item Faire le contraire de l'action
+    \item Exemple :
+    \begin{itemize}
+      \item uitkleden = déshabiller
+    \end{itemize}
+  \end{itemize} 
+\end{itemize}
+
+\subsection{Temps}
+\begin{itemize}[label=\textbullet, font=\Large]
+  \item hier = gisteren
+  \item avant-hier = eergisteren
+  \item demain = morgen
+  \item après-demain = overmorgen
+  \item matin = morgen/ochtend
+  \item soir = avond
+  \item demain matin = morgen ochtend
+  \item Ce soir = vanavond
+  \item Ce matin = vanmorgen
+  \item Ce aprem = vannamiddag
+  \item En début de phrase : 
+  \begin{itemize}[label=\ding{228}, font=\scriptsize]
+    \item s'Morgens
+    \item s'Ochtends
+    \item s'Avonds
+  \end{itemize}
+  \item Il y a
+  \begin{itemize}
+    \item Il y a 2 mois = 2 maanden geleden
+    \item Il y a 2 ans = 2 jaren geleden 
+  \end{itemize} 
+  \item Heure
+  \begin{itemize}
+    \item 4h10 = tien over vier
+    \item 3h45 = kwart voor vier
+    \item 6h30 = half zeven
+  \end{itemize}
+\end{itemize}
+
+\newpage
+\section{Vocabulaire examen (pas exhaustif)}
+\begin{center}
+  \begin{tabular}{|l|l|}
+    \hline
+    \makecell[c]{\textbf{\large{Français}}} & \makecell[c]{\textbf{\large{Néerlandais}}}\\
+    \hline
+    Le village & het dorpje\\
+    \hline
+    Proche & nabij\\
+    \hline
+    Je fais de l'informatique & Ik doe aan informatica\\
+    \hline
+    le cheval & het paard\\
+    \hline
+    Bizarre & Vreemd\\
+    \hline
+    Le métier & Het beroep\\
+    \hline
+    Faire connaisance & kennismaken\\
+    \hline
+    La connaissance & de kennis\\
+    \hline
+    Se présenter & Voorstellen\\
+    \hline
+    Enchanté & Aangenaam\\
+    \hline
+    Se rencontrer & Ontmoeten\\
+    \hline
+    La rencontre & De ontmoeting\\
+    \hline
+    La présentation & De voorstelling\\
+    \hline
+    La connaissance de l'anglais & De kennis van het engels\\
+    \hline
+    Nous nous rencontrons & We ontmoeten elkaar\\
+    \hline
+    Nous faisons connaissance & We maken kennis van elkaar\\
+    \hline
+    Je me présente & Ik stel me voor\\
+    \hline
+    Tu te présentes & Je stelt je voor\\
+    \hline
+    J'aime la bière belge & Ik houd van Belgisch bier\\
+    \hline
+    Angleterre & Engeland\\
+    \hline
+    Allemagne & Duitsland \\
+    \hline
+    Enchanté & Aangenaam\\
+    \hline
+    Je marie Charlotte le mois prochain & Ik trouw Charlotte volgende maand \\
+    \hline
+    Je suis fidèle à Charlotte & Ik ben Charlotte trouw\\
+    \hline
+    Je le pensais & Ik dacht het\\
+    \hline
+    Je suis né en Belgique en décembre & Ik ben december in Belgïe geboren\\
+    \hline
+    Informatitien & Informaticus\\
+    \hline
+    Deux Informatitiens & Twee informatitie\\
+    \hline
+    Un flamand & Een vlaming\\
+    \hline
+    La liberté & De vrijheid\\
+    \hline
+    La difficulté & De moeilijkheid\\
+    \hline
+    La possibilité & De mogelijkheid\\
+    \hline
+    La facilité & De makelijkheid\\
+    \hline
+    La vérité & De waarheid\\
+    \hline
+    La responsabilité & De verantwoordelijkheid\\
+    \hline
+    Chaque jour & Elke dag\\
+    \hline
+    Je préfère courir & Ik loop liever\\
+    \hline
+    Le voyage & De reis\\
+    \hline
+    D'où viens-tu ? (Lieu) & Waar kom je vandaan ?\\
+    \hline
+    D'où viens-tu ? (Origine) & Waar kom je uit ?\\
+    \hline
+    Où vas-tu ? & Waar ga je naar te ?\\
+    \hline
+    Marié  / Epousé & Gehuwd / Getrouwd\\
+    \hline
+    Divorcé & Gescheiden\\
+    \hline
+    Le divorce & De scheiding\\
+    \hline
+    Saluer & Groeten \\
+    \hline
+    L'acceuil / La salutation & De groeting\\
+    \hline
+    Comment vas-tu ? & Hoe maak je uit ? \\
+    \hline
+    Je me présentais & Ik stelde me voor\\
+    \hline
+    Chaque jour & Elke dag\\
+    \hline
+    Je me présentais & Ik stelde me voor\\
+    \hline
+    Je me suis présenté & Ik heb me voorgesteld\\
+    \hline
+  \end{tabular}\\
+\end{center}
+\begin{center}
+  \begin{tabular}{|l|l|}
+    \hline
+    A la campagne & Op het platteland\\
+    \hline
+    Flandre & Vlaanderen\\
+    \hline
+    Flamand (adj.) & Vlaamse\\
+    \hline
+    Wallonie & Wallonïe\\
+    \hline
+    Wallon (pers.) & Waal\\
+    \hline
+    Wallon (adj.) & Waals\\
+    \hline
+    Membres de la famille & Gezinsleden\\
+    \hline
+    Tôt & vroeg\\
+    \hline
+    A quelle heure te lèves-tu demain matin ? & Hoe laat sta je morgenochtend op ?\\
+    \hline
+    Célibataire & Vrijgezel\\
+    \hline
+    Je me sens bien & Ik voel me goed\\
+    \hline
+    Content & Blij\\
+    \hline
+    Je te présente Julien & Ik stel je Julien voor\\
+    \hline
+    A bientôt (dans la même journée) & Tot strachts\\
+    \hline
+    Je vous souhaite une bonne journée & Ik weens u een prettige dag\\
+    \hline 
+    Depuis 2001 & sinds 2001\\
+    \hline
+    Etage & verdieping\\
+    \hline
+    Employé & Bediende\\
+    \hline
+    Informations & inlichtingen\\
+    \hline
+    Moyens de transport & vervoermiddel\\
+    \hline
+    Sécurité & veiligheid\\
+    \hline
+    Poser une question & een vraag stellen\\
+    \hline
+    Je voudrais poser une question & Ik zou graag een vraag stellen\\
+    \hline
+    Navetteur & de pendelaar\\
+    \hline
+    Se déplacer (se rendre) & pendelen\\
+    \hline
+    Peur & bang\\
+    \hline
+    De qui as-tu peur ? & Voor wie ben je bang ?\\
+    \hline
+    Honnête & Eerlijk\\
+    \hline
+    Fier & Trots\\
+    \hline
+    La blague & De grap\\
+    \hline
+    Sentir & Voelen\\
+    \hline
+    La vie & het leven\\
+    \hline
+    L'amour & De liefde\\
+    \hline
+    La paresse & de luiheid\\
+    \hline
+    Le sentiment & het gevoel\\
+    \hline
+    Le calme & de rust\\
+    \hline
+    Réaliste & Realistisch\\
+    \hline
+    Ponctualité & De stiptheid\\
+    \hline
+    L'impatiente & Het ongeduld \\
+    \hline
+    S'ennuyer & Zich vervelen\\
+    \hline
+    Jamais & Nooit\\
+    \hline
+    Souvent & Vaak\\
+    \hline
+    Meestal & La plus part du temps\\
+    \hline
+    Toujours & Altijd\\
+    \hline
+    Parfois & Soms\\
+    \hline
+    Il a l'air grand & Hij ziet er groot uit\\
+    \hline
+    La différence & Het verschil \\
+    \hline
+    Je vais en ville & Ik ga weg naar de stad\\
+    \hline
+    Taille / Hauteur & De hoogte\\
+    \hline
+    La largeur & Breedte\\
+    \hline
+    Tu portes des lunettes & Je draagt een bril\\
+    \hline
+    Toujours & Altijd\\
+    \hline
+    Quand est votre anniversaire & Wanneer bent je jarig ?\\
+    \hline
+    Un jeune de 20 ans & A twintigjarig jongen\\
+    \hline
+    Je suis né le 9 décembre & Ik ben op negen december jarig\\
+    \hline
+  \end{tabular}\\
+  \begin{tabular}{|l|l|}
+    \hline
+    C'est juste & Dat klopt\\
+    \hline
+    Mettre (vêtement) & aandoen\\
+    \hline
+    Enlever (vêtement) & uitdoen\\
+    \hline
+    S'habiller & zich aankleden \\
+    \hline
+    Se déshabiller & zich uitkleden\\
+    \hline
+    Les vêtements & de Kleren\\
+    \hline
+    La chemise & Het hemd\\
+    \hline
+    Il a mis sa veste & Hij doet zijn jas aan\\
+    \hline
+    Pantalon & De broek\\
+    \hline
+    Les chaussures & De schoenen\\
+    \hline
+    Moustache & De snor \\
+    \hline
+    Le chapeau & De hoed\\
+    \hline
+    Kaal & Chauve\\
+    \hline
+    Slank & Mince\\
+    \hline
+    Les jumeaux & de tweeling\\
+    \hline
+    A quoi ressemblent-ils ? & What zien ze eruit ?\\
+    \hline
+    Jupe & rok\\
+    \hline
+    Robe & De jurk\\
+    \hline
+    Conduire & Leiden\\
+    \hline
+    Le fondateur & De oprichter \\
+    \hline
+    Créer & Uitwerken\\
+    \hline
+    Le défi & De uitdaging\\
+    \hline
+    voix & stem\\
+    \hline
+    Il a allumé la lumière & Hij heeft het licht aangedaan\\
+    \hline
+    Il s'habille maintenant & Hij kleed zich nu aan\\
+    \hline
+    La TV est allumée/éteinte & De TV is aan/uit\\
+    \hline
+  \end{tabular}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,40 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}La virtualisation}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Avantages}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Contraintes}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Methode de virtualisation}{1}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Technologies de virtualisation}{1}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Privil\IeC {\`e}ges d'acc\IeC {\`e}s}{2}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Virtualisation de la m\IeC {\'e}moire}{2}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Cloud}{3}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Container}{3}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Les ordinateurs superscalaires}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}AR2}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Decode/Dispatch}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Programming Model}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Cycle d'ex\IeC {\'e}cution}{4}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Architecture superscalaire}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Diff\IeC {\'e}rentes op\IeC {\'e}rations arithm\IeC {\'e}tique et logique}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Processeur Intel Pentium}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Probl\IeC {\`e}mes de l'architecture superscalaire}{6}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Probl\IeC {\`e}mes li\IeC {\'e}s a la structure du CPU}{6}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Probl\IeC {\`e}mes li\IeC {\'e}s aux instructions de saut}{7}{subsubsection.2.2.5}%
+\contentsline {section}{\numberline {3}RISC-CISC}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}RISC}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}CISC}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Pentium}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}M\IeC {\'e}moire cache}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Pipeline du Pentium}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Branch Unit / Branch Prediction}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Pentium's Back End}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Pentium et x86}{10}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Pentium Pro}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Issue Phase}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Completion Phase}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}L'architcture P6}{12}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Issue Phase}{12}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Completion phase}{12}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Pipeline}{12}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Branch Prediction du P6}{13}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}RISC, CISC}{13}{subsubsection.5.3.5}%
+\contentsline {section}{\numberline {6}Processeurs 64 bits}{13}{section.6}%

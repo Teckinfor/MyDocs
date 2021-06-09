@@ -1,0 +1,39 @@
+\BOOKMARK [1][-]{section.1}{La virtualisation}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Avantages}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Contraintes}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Methode de virtualisation}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Technologies de virtualisation}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Privil\350ges d'acc\350s}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Virtualisation de la m\351moire}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.7}{Cloud}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.8}{Container}{section.1}% 9
+\BOOKMARK [1][-]{section.2}{Les ordinateurs superscalaires}{}% 10
+\BOOKMARK [2][-]{subsection.2.1}{AR2}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Decode/Dispatch}{subsection.2.1}% 12
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Programming Model}{subsection.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Cycle d'ex\351cution}{subsection.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.2}{Architecture superscalaire}{section.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Diff\351rentes op\351rations arithm\351tique et logique}{subsection.2.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Processeur Intel Pentium}{subsection.2.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Probl\350mes de l'architecture superscalaire}{subsection.2.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Probl\350mes li\351s a la structure du CPU}{subsection.2.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Probl\350mes li\351s aux instructions de saut}{subsection.2.2}% 20
+\BOOKMARK [1][-]{section.3}{RISC-CISC}{}% 21
+\BOOKMARK [2][-]{subsection.3.1}{RISC}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.2}{CISC}{section.3}% 23
+\BOOKMARK [1][-]{section.4}{Pentium}{}% 24
+\BOOKMARK [2][-]{subsection.4.1}{M\351moire cache}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.2}{Pipeline du Pentium}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.3}{Branch Unit / Branch Prediction}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.4}{Pentium's Back End}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.5}{Pentium et x86}{section.4}% 29
+\BOOKMARK [1][-]{section.5}{Pentium Pro}{}% 30
+\BOOKMARK [2][-]{subsection.5.1}{Issue Phase}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.2}{Completion Phase}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.3}{L'architcture P6}{section.5}% 33
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Issue Phase}{subsection.5.3}% 34
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Completion phase}{subsection.5.3}% 35
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Pipeline}{subsection.5.3}% 36
+\BOOKMARK [3][-]{subsubsection.5.3.4}{Branch Prediction du P6}{subsection.5.3}% 37
+\BOOKMARK [3][-]{subsubsection.5.3.5}{RISC, CISC}{subsection.5.3}% 38
+\BOOKMARK [1][-]{section.6}{Processeurs 64 bits}{}% 39

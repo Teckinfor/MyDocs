@@ -1,0 +1,63 @@
+\babel@toc {french}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Mise en place de l'AD}}{3}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Nom du Netbios}}{3}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Ajouts des utilisateurs}}{4}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Ajout de ETU42877ADM dans le groupe Admin}}{4}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Screen de /etc/passwd}}{5}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces T\IeC {\'e}l\IeC {\'e}chargement du deb}}{5}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces V\IeC {\'e}rification du serveur Zabbix}}{6}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces G\IeC {\'e}n\IeC {\'e}ration de la cl\IeC {\'e} priv\IeC {\'e}e avec OpenSSL}}{6}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Cr\IeC {\'e}ation du certificat}}{6}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Cr\IeC {\'e}ation d'une cl\IeC {\'e}e associ\IeC {\'e}e au certificat}}{7}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Modification du bloc server}}{7}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Redirection Http vers Https}}{7}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Contacte bien en HTTPS}}{7}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Installation de l'agent Zabbix}}{8}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces G\IeC {\'e}n\IeC {\'e}ration d'une cl\IeC {\'e} PSK}}{8}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Reignement des informations li\IeC {\'e}es a la PSK}}{8}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Ajout de l'host Windows}}{9}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces T\IeC {\'e}l\IeC {\'e}chargement du Deb}}{9}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Installation de l'agent}}{9}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Modification de l'adresse du serveur}}{9}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Modification du Hostname de mon agent}}{10}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Modification de l'adresse ServerActive}}{10}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Cr\IeC {\'e}ation d'une PSK}}{10}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Modification des informations li\IeC {\'e}es au TLSConnect}}{10}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Ajout de l'host Ubuntu}}{11}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Cr\IeC {\'e}ation d'un template}}{11}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Cr\IeC {\'e}ation d'un item}}{11}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces R\IeC {\'e}cup\IeC {\'e}ration des logs}}{12}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Cr\IeC {\'e}ation des 3 triggers}}{12}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Cr\IeC {\'e}ation de tous les items}}{12}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Cr\IeC {\'e}ation de tous les triggers}}{13}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Arr\IeC {\^e}t du FTP pour tester}}{13}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Affichage du trigger sur le Dashboard}}{13}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Msfdb init}}{14}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Msfconsole}}{14}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces V\IeC {\'e}rification que la machine est connect\IeC {\'e}e}}{15}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Scan de l'OS}}{15}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Premier scan avec db\_nmap}}{15}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Second scan avec db\_nmap sur tous les ports}}{16}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces R\IeC {\'e}sultat de tous mes scans}}{16}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Reconnaissance du port 5985}}{17}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Renseignement sur Rapid7}}{17}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Compl\IeC {\'e}tion des options}}{17}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces R\IeC {\'e}sultat du Brute force}}{18}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Cr\IeC {\'e}ation de la backdoor}}{18}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Mise en place d'un serveur Apache}}{18}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces T\IeC {\'e}l\IeC {\'e}chargement de la backdoor sur la cible}}{19}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Lancement de la backdoor et \IeC {\'e}coute de celle-ci}}{19}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Migration vers un autre pid}}{19}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces V\IeC {\'e}rification que la session fonctionne bien}}{20}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Run persistence}}{20}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Suppression des logs}}{21}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Recherche de module associ\IeC {\'e} a la CVE-2015-1635}}{21}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Lancement de l'attaque}}{22}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Erreur Windows - DOS}}{22}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Nouveau scan pour d\IeC {\'e}couvrir Tomcat}}{23}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Completion des options du module}}{23}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Execution du payload}}{24}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Recherche de modules pour ProFTPD 1.3.5}}{24}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Choix du payload}}{24}{figure.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Completion des options du module}}{25}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Test et preuves}}{25}{figure.62}%

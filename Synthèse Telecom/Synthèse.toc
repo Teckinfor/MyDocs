@@ -1,0 +1,73 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Les ondes \IeC {\'e}lectromagn\IeC {\'e}tiques}{1}{section.1}%
+\contentsline {section}{\numberline {2}Les liaisons hertziennes en espace libre}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Propagation dans l'environnement terrestre}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Att\IeC {\'e}nuation et absorption}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Att\IeC {\'e}nuation}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Absorption}{2}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Ellipso\IeC {\"\i }de de Fresnel}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Types de liaisons}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Les antennes}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Le D\IeC {\'e}cibel}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caract\IeC {\'e}ristiques des antennes}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}\IeC {\'E}volution des ondes dans le spectre fr\IeC {\'e}quentiel}{4}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Diagramme de rayonnement}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Gain d'une antenne}{5}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Polarisation}{5}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Bande passante}{6}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Traitement des signaux}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Signal et Bruit}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Signal sinuso\IeC {\"\i }dal}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Le d\IeC {\'e}phasage}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}S\IeC {\'e}rie de Fourier}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Spectre d'un signal}{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Utilit\IeC {\'e} de traiter un signal}{7}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Modulation analogique}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}La modulation d'amplitude - AM}{7}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}D\IeC {\'e}modulation d'amplitude}{8}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}Modulation de fr\IeC {\'e}quence - FM}{8}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Modulation de phase - PM}{9}{subsection.5.3}%
+\contentsline {section}{\numberline {6}La modulation num\IeC {\'e}rique}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Transmissions num\IeC {\'e}rique en bande de base}{9}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Codage NRZ bipolaire}{10}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Codage NRZ unipolaire}{10}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Codage NRZ-I}{10}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}Codage RZ}{11}{subsubsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.5}Codage Manchester}{11}{subsubsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.2}Codes d\IeC {\'e}tecteurs et correcteurs d'erreurs}{11}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}D\IeC {\'e}tection d'erreur : bit de parit\IeC {\'e}}{11}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Correcteurs d'erreurs}{11}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Entrelacement}{11}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Modulation ASK}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Modulation FSK}{12}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Modulation 4FSK}{12}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Modulation AFSK - Audio FSK}{12}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Modulation PSK}{12}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Modulation QPSK}{13}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}La modulation \IeC {\`a} plus de 4 \IeC {\'e}tats}{13}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Modulation 8PSK}{13}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}Modulation 8QAM}{13}{subsubsection.6.7.2}%
+\contentsline {section}{\numberline {7}La modulation d'impulsions analogiques}{13}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Pulse Amplitude Modulation}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Pulse Width Modulation}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Pulse Position Modulation}{15}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}PPM normale}{15}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}PPM diff\IeC {\'e}rentielle}{15}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}Pulse Coded Modulation}{16}{subsection.7.4}%
+\contentsline {section}{\numberline {8}La fibre optique}{17}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Structure}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Les diff\IeC {\'e}rentes fibres optiques}{17}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}\IeC {\'E}metteurs optiques}{18}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}D\IeC {\'e}tecteurs optiques}{18}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Modulations et multiplexages}{18}{subsection.8.5}%
+\contentsline {section}{\numberline {9}QCM}{18}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Les ondes \IeC {\'e}lectromagn\IeC {\'e}tiques}{19}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Les liaisons hertziennes en espace libre}{19}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Les antennes}{20}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Signal - S\IeC {\'e}rie de Fourier - Spectre}{21}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Traitement d'un signal - analogique / num\IeC {\'e}rique}{22}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Transmissions num\IeC {\'e}riques et erreurs}{23}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Modulation analogique}{24}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Modulation num\IeC {\'e}rique}{25}{subsection.9.8}%
+\contentsline {subsection}{\numberline {9.9}Modulation d'impulsions analogiques}{25}{subsection.9.9}%
+\contentsline {subsection}{\numberline {9.10}La fibre optique}{26}{subsection.9.10}%

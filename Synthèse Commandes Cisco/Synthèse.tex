@@ -1,0 +1,294 @@
+\documentclass[a4paper]{article}
+
+\usepackage{lmodern}
+
+%% Language and font encodings
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{fourier-orns}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+%\renewcommand{\thefootnote}{\*}
+\pagestyle{fancy} 
+\setcounter{tocdepth}{5}
+
+
+
+%% Tikz stuff
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows}
+\tikzstyle{incolore} = [rectangle, rounded corners, draw=black, minimum height=1cm, minimum width=3cm, text width=3cm, text centered]
+
+
+\usepackage{float}
+\usepackage{libertine}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+
+
+% Défini la règle d'en-tête
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{} 
+\fancyhead[L]{}
+\fancyhead[R]{\footnotesize{\leftmark}}
+
+% Défini la règle de fond de page
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{} 
+\fancyhead[L]{}
+\fancyfoot[R]{\thepage}
+
+\definecolor{Zgris}{rgb}{0.87,0.85,0.85}
+
+\usepackage{eso-pic,graphicx}
+\usepackage{xcolor}
+\newcommand{\bgimg}[1]{
+\AddToShipoutPicture
+   {
+      \put(\LenToUnit{0 cm},\LenToUnit{0 cm})
+      {
+            \includegraphics[width=\paperwidth,height=\paperheight]{#1} 
+      }
+   }
+}
+
+\begin{document}
+  \begin{titlepage}
+    \begin{sffamily}
+      \begin{center}
+        \textnormal{}\\[6.5cm]
+        % Upper part of the page. The '~' is needed because \\
+        % only works if a paragraph has started.
+        % Title
+        \HRule \\[0.4cm]
+        { \Huge \bfseries Synthèse\\ Commandes Cisco\\ [0.4cm] }
+        \HRule \\[3cm]
+        \Large
+        Premier Bloc\\
+        Sécurité des systèmes\\
+        Année académique 2019-2020\\[0.5cm]
+        \emph{Rédigé par Sénéchal Julien}
+        \vfill
+        % Bottom of the page
+        {\large 22 Mars 2020}
+      \end{center}
+    \end{sffamily}
+  \end{titlepage}
+
+\Large\textbf{ATTENTION - LORSQUE VOUS VOYEZ "[]", CELA SIGNIFIE QUE VOUS DEVEZ MODIFIER CETTE VALEUR EN FONCTION DE CE QUI Y EST NOTÉ}
+\normalsize
+\section{Les Routeurs}
+
+\subsection{Commandes de bases}
+\begin{itemize}
+  \item Se mettre en mode \emph{EXEC} : \emph{enable}
+  \item Configurer le terminal : \emph{configure terminal}
+  \item Changer le nom de notre routeur : \emph{hostname [nom]}
+  \item Sortir de n'importe quel mode/environnement (ex: EXEC, Configure terminal, interfaces,...) : \emph{exit}
+  \item Vérifier tous les ports du routeur : \emph{show ip interface brief}
+  \item Pour connaître les protocoles utilisés (ex : \emph{rip}): \emph{show ip protocols}
+\end{itemize}
+
+\subsection{Effacer la configuration d'un routeur}
+Vous devez être en mode \emph{EXEC} pour cela :
+\begin{itemize}
+  \item \emph{erase startup-config}
+  \item \emph{reload}
+\end{itemize}
+
+\subsection{Commandes interfaces}
+\begin{itemize}
+  \item Configurer une interface : \emph{interface [nom\_interface]}
+  \item Changer l'adresse IP : \emph{ip address [IP] [NetMask]}
+  \item Décrire une interface : \emph{description [La description]}
+  \item Garder l'interface active (obligatoire pour utiliser une interface): \emph{no shutdown}
+  \item Vitesse de la clock (uniquement sur le DCE): \emph{clock rate [vitesse]}
+\end{itemize}
+
+\subsection{Créer des routes}
+\begin{itemize}
+  \item Route récursive (On choisit la cible en fonction de son IP) :\\ 
+  \emph{ip route [IP de destination des paquets] [NetMask du réseaux destinataire] [IP routeur]}
+  \item Route directement connectée (On envoie les paquets directement dans un \emph{Serial}) :\\ 
+  \emph{ip route [IP de destination des paquets] [NetMask du réseaux destinataire] [serial connecté au routeur]}
+\end{itemize}
+
+\subsection{Logging Synchronous}
+On peut recevoir des messages du routeur qui trouble l’entrée des commandes.
+Pour éviter ça, on peut demander un \emph{Logging Synchronous}.\\
+Pour ce faire, une fois dans \emph{Router(config\#)} :
+\begin{itemize}
+  \item \emph{Line console 0}
+  \item \emph{logging synchronous}
+  \item \emph{exit}
+\end{itemize}
+
+\subsection{Sécurité}
+\begin{itemize}
+  \item Pour mettre un mode de passe au \emph{EXEC MODE} : \emph{enable secret [mdp]}
+  \item Pour encrypter les mots de passe dans le fichier de configuration : \emph{service password-encryption}
+  \item Pour choisir le nombre de caractère minimum pour tous les mots de passe du routeur : \\\emph{security passwords min-length [nb de caractère]}
+  \item Pour empêcher les attaques par force brute, nous pouvons mettre un cooldown entre chaque erreur : \emph{login block-for [secondes] attempts [nombre de tentatives] within [secondes]}.\\
+  Le premier champ sert a indiquer le nombre de seconde de cooldown entre chaque tentative. Le dernier champ sert à indiquer le nombre de secondes que l'utilisateur peut prendre pour renseigner son mot de passe.
+  \item Pour pouvoir permettre de se déconnecter du routeur automatiquement après un temps d'inactivitée :\\
+  \emph{line console 0}\\
+  \emph{exec-timeout [minutes] [secondes]}\\
+  \emph{live vty 0 4}\\
+  \emph{exec-timeout [minutes] [secondes]}\\
+  \emph{exit}
+\end{itemize}
+
+\subsection{Etablir une connection SSH}
+Il faut assigner le nom de domaine : \\
+\emph{ip domain-name [nom de domaine]}\\
+Puis, il faut créer un utilisateur pour le SSH. Si le privilège de l'utilisateur n'est pas spécifié dans la commande,
+celui-ci aura automatiquement les privilèges \emph{EXEC} (niveau 15).\\
+\emph{username [nom] privilege [level] secret [MotDePasse]}\\
+Maintenant, nous allons configurer notre "VTY line" afin d'accepter le SSH.\\
+\emph{line vty 0 4}\\
+Ici le "0 4" va permettre l'ouverture de 5 sessions maximum. (Ne me demandez pas pourquoi, c'est juste le fruit de mes recherches.)
+Maintenant il faut renseigner par quel moyen on veut se connecter\\
+\emph{transport input ssh}\\
+\emph{login local}\\
+\emph{exit}\\
+\emph{crypto key generate rsa}\\
+Après cela, on nous demande de rentrer le nombre de bits pour le modulus, entrez \emph{"1024"}\\
+
+\subsection{Configuration RIP}
+Rentrez en mode EXEC, puis en mode configuration du terminal.\\
+Entrez \emph{routeur rip} pour commencer la configuration du protocole RIP.\\
+Faites bien attention a marquer \emph{version 2} par après, sans quoi votre protocole ne prendra pas en 
+compte les NetMasks !\\
+\begin{itemize}
+  \item Définir les interfaces concernées par le RIP : \emph{network [IP]}
+  \item Définir les interfaces n'étant pas connectée à un routeur (par Sécurité) : \emph{passive-interface [interface (ex : g0/0)]}
+  \item Désactiver le résumé de routes : \emph{no auto-summary}
+\end{itemize}
+\textcolor{red}{\textbf{ATTENTION :}} Le réseaux "Internet" ne participe pas au routage RIP !
+Pour \emph{Internet}, nous utiliserons une route statique !\\
+Ensuite, afin de pouvoir propager notre route vers \emph{Internet} sur tout le RIP, nous allons devoir configurer cela :
+\begin{itemize}
+  \item \emph{routeur rip} (pour ce remettre en configuration RIP)
+  \item \emph{default-information originate} (Seulement sur le routeur qui nous a servi a configurer notre route !)
+\end{itemize}
+Pour vérifier que tout est opérationnel : \emph{show ip route} ou \emph{show ip route rip}\\
+Au cas où vous constatez un problèmes avec vos routes, et voulez recommencer, la commande \emph{clear ip route *} va supprimer 
+toutes les routes présentes sur \textbf{le} routeur sur lequel vous avez lancer la commande !
+
+\subsection{IPV6}
+\begin{itemize}
+  \item Pour activer l'IPV6 sur le routeur : \emph{ipv6 unicast-routing}
+  \item Définir l'adresse : \emph{ipv6 address [adresse + CIDR] eui-64}\\
+  (le protocole \emph{eui-64} va permettre en quelque sorte de remplacer 
+  un DHCP en permettant automatiquement de transmettre aux machines sur le réseau l'adresse du réseau et va ainsi permettre aux machines de créer leurs
+  adresses IPV6 sur base de leur adresse MAC pour qu'il n'y aie pas de répétition. L'adresse obtenue sur les PC se nomme le \emph{SLAAC}. Donc, utile uniquement sur les interfaces LAN.)
+  \item On n'oublie pas le \emph{no shutdown} 
+\end{itemize}
+\subsubsection{Routage statique en IPV6}
+\begin{itemize}  
+  \item Routes directement connectée : \emph{ipv6 route [adresse + CIDR] [interface]}
+  \item Routes récursives : \emph{ipv6 route [adresse + CIDR] [adresse routeur]}
+  \item Routes par défaut : \emph{ipv6 route $::$/0 [interface]}\\
+  Le \emph{"$::$/0"} signifie la même chose que le 0.0.0.0 0.0.0.0 en IPV4
+  \item Pour supprimer une route :\\ \emph{no ipv6 route [adresse + CIDR] [adresse routeur/interface (selon si récursive ou directement connectée)]}
+\end{itemize}
+\subsubsection{RIPng}
+\begin{itemize}
+  \item Pour activer le RIPng sur votre routeur, faites \emph{ipv6 rip [nom-de-domaine] enable} dans la configuration de vos interfaces. Le "nom de domaine" peut être ce que vous voulez si non précisé dans les consignes du moment du vous utilisiez
+  le même sur vos autres routeurs faisant partie de votre RIPng. Ne pas mettre cette commande sur les interfaces LAN pour des raisons de sécurité.
+  \item Une fois le RIPng activé sur toutes les interfaces non-LAN de vos routeurs, afin que les interfaces LAN puissent s'en servir, entrez la commande \emph{ipv6 router rip [nom-de-domaine]} dans la configuration du terminal,
+  puis faites \emph{redistribute connected}.
+  \item De la même manière que sur le RIPv2, la commande \emph{ipv6 rip [nom-de-domaine] default-information originate} vous permettra de définir une route par défaut envoyant par exemple sur \emph{internet}. 
+  Uniquement à mettre sur l'interface du routeur vers lequel doivent sortir les paquets de cette route par défaut.
+  \item Pour voir les routes créés a partir de votre rip et vos routes statiques, faites \emph{show ipv6 route}
+\end{itemize}
+
+
+
+
+
+
+
+
+\newpage
+\section{Les Switchs}
+
+\subsection{Les commandes de bases}
+\begin{itemize}
+  \item Se mettre en mode \emph{EXEC} : \emph{enable}
+  \item Sortir de n'importe quel mode/environnement (ex: EXEC, Configure terminal, interfaces,...) : \emph{exit}
+  \item Vérifier tous les ports du switch : \emph{show ip interface brief}
+  \item Pour éteindre plusieurs interfaces en même temps : \\
+  \emph{interface range [range1] , [range2] , [range3]}\\
+  \emph{shutdown}\\
+  Exemple :\emph{ interface range FastEthernet0/1–4 , GigabitEthernet0/1-2}
+  
+\end{itemize}
+
+\subsection{Supprimer la configuration d'un Switch}
+Vous devez être en mode \emph{EXEC} pour cela :
+\begin{itemize}
+  \item \emph{delete {\NoAutoSpacing flash:vlan.dat}}
+  \item \emph{erase startup-config}
+  \item \emph{reload}
+\end{itemize}
+
+\subsection{Etablir une connection SSH}
+Il faut assigner le nom de domaine : \\
+\emph{ip domain-name [nom de domaine]}\\
+Puis, il faut créer un utilisateur pour le SSH. Si le privilège de l'utilisateur n'est pas spécifié dans la commande,
+celui-ci aura automatiquement les privilèges \emph{EXEC} (niveau 15).\\
+\emph{username [nom] privilege [level] secret [MotDePasse]}\\
+Maintenant, nous allons configurer notre "VTY line" afin d'accepter le SSH.\\
+\emph{line vty 0 15}\\
+Ici le "0 15" va permettre l'ouverture de 16 sessions maximum.
+Maintenant il faut renseigner par quel moyen on veut se connecter\\
+\emph{transport input ssh}\\
+\emph{login local}\\
+\emph{exit}\\
+\emph{crypto key generate rsa}\\
+Après cela, on nous demande de rentrer le nombre de bits pour le modulus, entrez \emph{"1024"}\\
+
+\subsection{Sécurité}
+\begin{itemize}
+  \item Pour pouvoir permettre de se déconnecter du routeur automatiquement après un temps d'inactivitée :\\
+  \emph{line console 0}\\
+  \emph{exec-timeout [minutes] [secondes]}\\
+  \emph{live vty 0 15}\\
+  \emph{exec-timeout [minutes] [secondes]}\\
+  \emph{exit}
+  \item Pour empêcher les attaques par force brute, nous pouvons mettre un cooldown entre chaque erreur : \emph{login block-for [secondes] attempts [nombre de tentatives] within [secondes]}.\\
+  Le premier champ sert a indiquer le nombre de seconde de cooldown entre chaque tentative. Le dernier champ sert à indiquer le nombre de secondes que l'utilisateur peut prendre pour renseigner son mot de passe.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
