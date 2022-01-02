@@ -25,6 +25,10 @@ Tous les documents sont rédigés en LaTeX, leur code est également disponible.
 
 [Système d'exploitation open source théorie](https://github.com/Teckinfor/MyDocs/blob/main/Système%20d'exploitation%20open%20source/Synthèse.pdf)
 
+### Bloc 3
+
+[Synthèse Sécurité applicative](https://github.com/Teckinfor/MyDocs/blob/main/Sécu%20Applicative/Synthèse_SécuritéApplicative.pdf)
+
 
 ## Rapports
 
