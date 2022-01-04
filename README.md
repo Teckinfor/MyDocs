@@ -38,6 +38,8 @@ Tous les documents sont rédigés en LaTeX, leur code est également disponible.
 
 [Sécurité du système d'exploitation open source](https://github.com/Teckinfor/MyDocs/blob/main/Sécurité%20OS%20open%20source/rapport-henallux/Rapport%20sécu%20OS%20-%20Etu42877.pdf)
 
+[Rapport du projet "MySecureIDS"](https://github.com/Teckinfor/MySecureIDS/blob/main/Rapport%20projet%20Développement%20-%20Wallemme%20Maxime%20et%20Sénéchal%20Julien.pdf)
+
 ### Bloc 3
 
 [Forensics - Rapport n°1](https://github.com/Teckinfor/MyDocs/blob/main/Forensics%20-%20Rapport%20n°1/forensic_rapport_manipulation1_classeA_groupe1.pdf)
