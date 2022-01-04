@@ -40,8 +40,6 @@ Tous les documents sont rédigés en LaTeX, leur code est également disponible.
 
 ### Bloc 3
 
-[Test de pénétration - Sécurité Offensive](https://github.com/Teckinfor/MyDocs/blob/main/Sécurité%20Offensive/Rapport_Sécurité_Offensive.pdf)
-
 [Forensics - Rapport n°1](https://github.com/Teckinfor/MyDocs/blob/main/Forensics%20-%20Rapport%20n°1/forensic_rapport_manipulation1_classeA_groupe1.pdf)
 
 [Forensics - Rapport n°2](https://github.com/Teckinfor/MyDocs/blob/main/Forensics%20-%20Rapport%20n°2/forensic_rapport_manipulation2_classeA_groupe1.pdf)
@@ -53,3 +51,5 @@ Tous les documents sont rédigés en LaTeX, leur code est également disponible.
 [Séminaire - Kubernetes](https://github.com/Teckinfor/MyDocs/blob/main/Séminaire%20Kubernetes/S_minaire1.pdf)
 
 [Séminaire - Normes de sécurité](https://github.com/Teckinfor/MyDocs/blob/main/Séminaire%20Norme%20de%20Sécurité/Seminaire2.pdf)
+
+[Test de pénétration - Sécurité Offensive](https://github.com/Teckinfor/MyDocs/blob/main/Sécurité%20Offensive/Rapport_Sécurité_Offensive.pdf)
