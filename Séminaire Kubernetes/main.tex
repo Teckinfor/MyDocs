@@ -1,0 +1,208 @@
+\documentclass[a4paper]{article}
+
+\usepackage{lmodern}
+
+%% Language and font encodings
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{fourier-orns}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+%\renewcommand{\thefootnote}{\*}
+\pagestyle{fancy} 
+\setcounter{tocdepth}{5}
+
+
+
+%% Tikz stuff
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows}
+\tikzstyle{incolore} = [rectangle, rounded corners, draw=black, minimum height=1cm, minimum width=3cm, text width=3cm, text centered]
+
+
+
+\usepackage{libertine}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+
+
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{} 
+\fancyhead[L]{}
+\fancyhead[R]{\footnotesize{\leftmark}}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{} 
+\fancyhead[L]{}
+\fancyfoot[R]{\thepage}
+
+\definecolor{Zgris}{rgb}{0.87,0.85,0.85}
+
+\usepackage{eso-pic,graphicx}
+\usepackage{xcolor}
+\newcommand{\bgimg}[1]{
+\AddToShipoutPicture
+   {
+      \put(\LenToUnit{0 cm},\LenToUnit{0 cm})
+      {
+            \includegraphics[width=\paperwidth,height=\paperheight]{#1} 
+      }
+   }
+}
+
+\usepackage{float}
+\graphicspath{ {figures/} }
+
+\begin{document}
+
+
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+    % Upper part of the page. The '~' is needed because \\
+    % only works if a paragraph has started.
+    \includegraphics[width=5cm]{images/LogoHenallux.PNG}~\\[1.5cm]
+    \textsc{\Large Séminaire du 06 décembre 2021}\\[1.5cm]
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries Rapport sur le séminaire :\\ Kubernetes\\[0.4cm] }
+    \HRule \\[2cm]
+    % Author and supervisor
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+        \textsc{Auteur} :\\
+        Sénéchal Julien\\
+        
+
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.55\textwidth}
+      \begin{flushright} \large
+		Sécurité des systèmes\\
+		Hénallux\\
+		Troisième Bloc, groupe A \\
+		Année académique 2021-2022\\
+      \end{flushright}
+    \end{minipage}
+    \vfill
+    % Bottom of the page
+    {\large 07 Décembre 2021}
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+% \rfoot{\includegraphics[height=1.25cm]{images/LogoHenallux.png}}
+
+
+
+
+
+
+
+\let\cleardoublepage\clearpage
+
+%\tableofcontents
+
+\newpage
+\section{Compte rendu informatif}
+\subsection{Présentation du conférencier}
+Il s'agissait de monsieur Novez Damien. Après avoir fait ingénieur civil, il lança son entreprise nommée Cartesoft, basé au Luxembourg. Cartesoft présente des solutions informatiques adaptées aux besoins de leurs clients mais accompagne aussi les entreprises dans leur évolution informatique.
+\subsection{Tout d'abord, pourquoi Docker ?}
+Les conteneurs (et plus particulièrement la solution Docker) permettent de lancer un seul processus de manière virtuelle sans devoir recréer l'entièreté de l'environnement. Ce qui permet de limiter les ressources demandées au stricte nécessaire. De plus, la création d'une application dans un environnement spécifique n'est plus un problème. En effet, il suffit simplement d'implémenter l'application dans un conteneur du même environnement afin de rendre celui-ci portable. Par exemple, une application utilisant des DLLs Ubuntu ne peut pas être lancée sur une Fedora. Mais en mettant l'application dans un conteneur Ubuntu, celui-ci sera ainsi portable sur tous les environnements (Fedora, Red-Hat, OpenSuse, etc..).
+
+\subsection{Kubernetes et OpenShift}
+\subsubsection{Que sont-ils ?}
+Ce sont des orchestrateurs de conteneurs.
+\begin{itemize}
+    \item Kubernetes
+    \begin{itemize}
+        \item Solution open-source dévelloppée par Google
+        \item Basé sur le framework Borg
+        \item Se lance sur tous les environnements
+    \end{itemize}
+    \item Openshift
+    \begin{itemize}
+        \item Solution Red-Hat
+        \item Basé sur Kubernetes avec un ajout de fonctionnalités
+        \item Utilisation reservé aux environnements red-hat
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{A quoi servent-ils ?}
+\begin{itemize}
+    \item Communication facilitée entre conteneurs
+    \item Déploiement rapide
+    \item Scale-Up facile et rapide
+    \item Conseillé pour des applications stateless
+\end{itemize}
+
+\subsubsection{En détails}
+Un pod est la plus petite unité sur Kubernetes. Il s'agit d'un ou plusieur conteneur qui constitue une application. Un pod est éphémère, c'est pourquoi toute écriture de données doit se faire dans des volumes. Ceux-ci sont externes au pod et ne sont donc pas supprimés en même temps que celui-ci. La communication inter-conteneur et inter-pod est assuré par des services, qui s'occupent automatiquement d'adresser les conteneurs de telle manière à ce qu'on puisse créer des pods et en supprimer tout en assurant la communication entre eux. Les ingress, sont aussi des services mais ceux-ci assurant la communication vers l'extérieur. Les réplicasets, permettent de créer un nombre X de pods en ajoutant et supprimant au besoin, et ce dans l'optique d'économiser un maximum de ressources.
+
+
+\newpage
+\section{Compte rendu personnel}
+Tout d'abord, j'ai trouvé très intéressant de pouvoir avoir l'avis d'un professionnel qui a déjà pas mal d'expérience dans le déploiement et l'utilisation de Kubernetes. En effet, il a pu nous expliquer concrètement comment Cartesoft utilise cet outil et comment ils fonctionnent pour gérer les coûts liés aux divers fournisseurs cloud. De plus, il est vrai de kubernetes répond réellement à des besoins de sécurité en garantissant la disponibilité et la redondance. Néanmoins, j'aurais souhaité avoir un exemple concret avec l'explication de ce qui a déjà dû être fait pour un client et comment ils ont implémenté cela. Cela nous aurait permis d'avoir une approche pratique en plus de l'approche théorique. Mis à part cela, je n'ai rien d'autre de négatif à en dire. Il nous a également conseillé d'utiliser, si possible, le cloud de google car ce sont eux qui ont créé Kubernetes et que par conséquent, c'est le meilleur cloud (selon lui) pour mettre en place kubernetes sur un cloud. Enfin, il nous a donné de bons conseils de recherche pour nous permettre d'acquérir plus de compétences dans ce domaine. Il nous a par exemple suggéré de nous renseigner sur Ansible ou de tester l'utilisation de divers clouds avec notre compte étudiant, chose que nous ne savions pas tous possible.
+
+
+
+
+%\newpage \addcontentsline{toc}{section}{Table des figures} \listoffigures
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
