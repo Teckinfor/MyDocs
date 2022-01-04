@@ -1,0 +1,293 @@
+\documentclass[a4paper]{article}
+
+\usepackage{lmodern}
+
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{pifont}
+
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{fourier-orns}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\pagestyle{fancy} 
+\setcounter{tocdepth}{5}
+\usepackage{array}
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows}
+\tikzstyle{incolore} = [rectangle, rounded corners, draw=black, minimum height=1cm, minimum width=3cm, text width=3cm, text centered]
+\usepackage{float}
+
+\usepackage{makecell}
+\usepackage{libertine}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+
+
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{} 
+\fancyhead[L]{}
+\fancyhead[R]{\footnotesize{\leftmark}}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{} 
+\fancyhead[L]{}
+\fancyfoot[R]{\thepage}
+
+\definecolor{Zgris}{rgb}{0.87,0.85,0.85}
+
+\usepackage{eso-pic,graphicx}
+\usepackage{xcolor}
+\newcommand{\bgimg}[1]{
+\AddToShipoutPicture
+   {
+      \put(\LenToUnit{0 cm},\LenToUnit{0 cm})
+      {
+            \includegraphics[width=\paperwidth,height=\paperheight]{#1} 
+      }
+   }
+}
+
+\usepackage{mdframed}
+\newmdenv[topline=false, bottomline=false, rightline=false, skipabove=\topsep, skipbelow=\topsep]{example}
+
+
+\begin{document}
+
+
+
+
+  \begin{titlepage}
+    \begin{sffamily}
+    \begin{center}
+      \textnormal{}\\[6.5cm]
+      \HRule \\[0.4cm]
+      { \Huge \bfseries Synthèse théorique\\ Forensics\\ [0.4cm] }
+      \HRule \\[3cm]
+      \Large
+      Troisième Bloc\\
+      Sécurité des systèmes\\
+      Année académique 2021-2022\\[0.2cm]
+      \emph{Rédigé par Sénéchal Julien}
+      \vfill
+      {\large 04 Janvier 2022}
+    \end{center}
+    \end{sffamily}
+  \end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Termes et définitions}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item CSIRT :\\
+    Computer Security Incident Response Team = équipe qui s'occupe de la CSIRC.\\\\
+    \item CSIRC :\\
+    Computer Security Incident Response Capability = Politique de réponse aux incident.\\\\
+    \item Computer security Incident :\\
+    Violation des règles de sécurité ou des règles de sécurité standard.\\\\
+    \item Digital Forensics:\\
+    Permet de récupérer des données sous certaines conditions strictes afin de pouvoir les utiliser comme preuve légale de la même manière qu'une preuve physique (peut avoir lieu lors d'un crime hors que la cybercriminalité).\\\\
+    \item DFIR :\\
+    Digital Forenscis and Incident Response = Equipe qui regroupe la CSIRT et l'équipe forensics.\\\\
+    \item SOC : Security Operation Center\\\\
+    \item SIEM : Security Information and Event Management\\\\
+    \item BCDR :\\Business continuity and disaster recovery = S'occupe de la mise en place de la stratégie de restauration.\\\\
+    \item Imaging vs Copying :\\
+    \begin{itemize}
+        \item Copying : Ne permet pas de récupérer les fichiers cachés, supprimés, les metadatas etc.
+        \item Imaging : On conserve chaque bit du disque/partition.
+    \end{itemize}
+    \item Dead Imaging :\\
+    Récupération de l'image depuis la machine forensic.
+    \item Lvie Imaging :\\
+    Récupération de l'image depuis un système qui tourne toujours.
+\end{itemize}
+\newpage
+
+\section{Incident Response Process}
+
+\subsection{Préparation}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item Former une équipe DFIR
+    \item Mettre en place des procédures
+    \item Préparer un laboratoires (des machines etc.) pour le travail forensique
+    \item Exercice régulier
+    \item Sécurisation de l'infrastrucutre
+\end{itemize}
+
+\subsection{Détection}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item Les outils de SIEM permettent de détecter des comportements anormaux :\\
+    SolarWind, Splunk, Qradar, ...
+    \item IDS, antivirus, monitoring de logs, vérification de l'intégrité des fichiers peuvent compléter le SIEM
+    \item La détection peut provenir de l'extérieur (ex : ISP, antivirus, agences, etc.)
+    \item Souvent découvert par l'utilisateur
+    \item Signes précurseurs :\\
+    Entrée de logs qui montrent l'utilisation d'un scanneur de vulnérabilités, une annonce d'une nouvelle CVE, menace d'un groupe de hacker...
+\end{itemize}
+
+\subsection{Analyse}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item Retrouver la source de l'incident et toutes ses traces
+    \item Doit respecter des règles en cas d'utilisation d'éventuelles preuves pour des démarches judiciaires
+    \item Beaucoup d'outils (autopsy, FTKImager, ...)
+\end{itemize}
+
+\subsection{Endiguement}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item Isoler les machines infectées :\\
+    Peut être dangereux car certains malware détectent la mise en quarantaine et profitent pour chiffrer toutes les machines infectées
+    \item Dépend fortement du type de menace détecté et de l'infrastructure à protéger
+\end{itemize}
+
+\subsection{Éradication et récupération}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item Supprimer la menace et restaurer le système
+    \item Patcher les vulnérabilités
+    \item La stratégie de restauration du système appartient au BCDR
+\end{itemize}
+
+\subsection{Post-incident}
+\begin{itemize}[label=\textbullet, font=\Large]
+    \item Regrouper toutes les informations des étapes précédentes et faire un rapport (peut être fait à l'aide d'une main courante).
+\end{itemize}
+\newpage
+
+\section{Mise en place d'un CSIRT}
+\begin{enumerate}
+    \item Création d'une charte avec ces divers points :
+    \begin{itemize}
+        \item Accord écrit de la direction
+        \item Définir le périmètre que couvre l'équipe
+        \item Définir la mission du CSIRT
+        \item Services fournis par le CSIRT (formation, test d'outils, détection, analyse, etc.)
+    \end{itemize}
+    \item Recruter dans la team :
+    \begin{itemize}
+        \item Coordinateur (\textbf{peut} être le CISO)
+        \item Analyste CSIRT (collecte et analyse les informations utiles)
+        \item Personne dédiée au service SOC (Point de contact entre le SOC et la CSIRT)
+        \item Ingénieur Sécurité IT (responsables des outils, mise en place d'un environnement de prise en charge d'une IR)
+    \end{itemize}
+\end{enumerate}
+\newpage
+
+\section{Digital Forensic Process}
+\subsection{Identification}
+Tracer l'attaque et identifiant les différents élément qu'elle a laissé derrière elle. Une fois les preuves réunies :
+\begin{itemize}
+    \item Isoler la preuve
+    \item Empêcher la modification des logs
+    \item Plus de communication réseaux (sac de faraday pour un téléphone par exemple)
+    \item Faire des snapshots si possible
+    \item Protéger les preuves physiquement
+    \item Si donnée volatile, faire attention à laisser l'appareil sous tension
+\end{itemize}
+
+\subsection{Collection}
+Récupérer les données nécessaires à l'enquête de manière délicate pour s'assurer que les données seront recevable en justice. De plus, certaines de ces données sont volatiles (cache, registre, RAM, fichier tmp,...).
+\begin{itemize}
+    \item Les preuves ne doivent pas être altérer (importance du hash)
+    \item Le processus doit être documenté
+    \item Chain of custody :
+    \begin{itemize}
+        \item Formulaire à maintenir à jour pour chaque preuve.
+        \item Permet de garder une histoire du cycle de vie de la preuve
+    \end{itemize}
+\end{itemize}
+
+\subsection{Examination}
+Extraire l'information pertinente de la preuve.
+
+\subsection{Analyse}
+Corrélation des différentes données afin de tirer des conclusions
+
+\subsection{Présentation}
+Rédaction d'un rapport :
+\begin{itemize}
+    \item Résumé des étapes
+    \item Mise en évidences des données critiques saisies
+    \item Objectif
+    \item Doit identifier la source de l'incident
+\end{itemize}
+\newpage
+
+\section{Imager de la mémoire non-volatile}
+\subsection{Préparation}
+\begin{itemize}
+    \item S'assurer qu'il n'y aie plus rien sur le disque hôte (ex outil : eraser)
+    \item S'assurer que le disque cible soit bloqué en read-only (travail des write-blocker qui peuvent être software et hardware)
+\end{itemize}
+\subsection{Imaging}
+Différents outils :
+\begin{itemize}
+    \item Sous Linux : Guymager, dc3dd, Paladin, etc. 
+    \item Sous Windows : FTK
+\end{itemize}
+\subsection{Analyse}
+\begin{itemize}
+    \item Autopsy
+    \item Permet de gagner beaucoup de temps dans l'analyse
+\end{itemize}
+\newpage
+
+\section{Imager de la mémoire volatile}
+\subsection{Acquisition}
+Linux :
+\begin{itemize}
+    \item LIME : Permet de créer une image de la mémoire vive (possibilité de faire un hash)
+\end{itemize}
+Windows :
+\begin{itemize}
+    \item FTK imager
+    \item BelkaSoft RAM Capturer
+\end{itemize}
+Limites de l'acquisition :
+\begin{itemize}
+    \item Machine toujours allumée
+    \item Accès au compte admin necéssaire
+    \item Peut faire planter la machine
+\end{itemize}
+Avantages : 
+\begin{itemize}
+    \item Offre des informations complémentaires sur l'état d'execution de la machine (processus, kernel, réseaux, ...)
+\end{itemize}
+Dans le cas d'une équipe DFIR, il existe F-Response qui va mettre un agent sur les machines, rendant facile la récupération d'une image disque et de la mémoire à distance.
+\subsection{Analyse}
+\begin{itemize}
+    \item Volatility
+    \begin{itemize}
+        \item Création d'un profil nécessaire pour les machines sous Linux
+    \end{itemize}
+\end{itemize}
+\newpage
+\section{Spécificités de la mémoire flash}
+\begin{itemize}
+    \item Pas d'overwrite, il faut donc supprimer le contenu avant d'écrire
+    \item Suppression par bloc
+    \item Nombre limité d'accès en écriture
+    \item SATA TRIM :
+    \begin{itemize}
+        \item Commande faite par l'OS pour signaler les emplacements à effacer (dans le but d'améliorer la performance car pas besoin de supprimer avant d'écrire car déjà fait)
+        \item Problème pour l'analyse Forensics et pour le hash d'une image disque
+        \item Montre l'importance de bloquer l'écriture pendant la collecte d'informations
+    \end{itemize}
+\end{itemize}
+
+\end{document}
