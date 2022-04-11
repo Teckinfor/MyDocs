@@ -62,4 +62,4 @@ Tous les documents sont rédigés en LaTeX, leur code est également disponible.
 
 # Annexes
 
-[Réparer le bootloader - W10]()
+[Réparer le bootloader - W10](https://github.com/Teckinfor/MyDocs/blob/main/Annexes/RepairBootloader/RepairBootloader.md)
