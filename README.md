@@ -1,7 +1,5 @@
 # Tous mes documents scolaires (rapports, synthèses, etc.)
 
-Tous les documents sont rédigés en LaTeX, leur code est également disponible.
-
 ## Synthèses
 
 ### Bloc 1
