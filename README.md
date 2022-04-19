@@ -81,3 +81,5 @@
 # Annexes
 
 [Réparer le bootloader - W10](https://github.com/Teckinfor/MyDocs/blob/main/Annexes/RepairBootloader/RepairBootloader.md)
+
+[Administrator Account Recovery W10](https://github.com/Teckinfor/MyDocs/blob/main/Annexes/Administrator%20account%20recovery%20W10/AdministratorAccountRecoveryW10.md)
