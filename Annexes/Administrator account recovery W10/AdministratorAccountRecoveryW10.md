@@ -6,7 +6,7 @@
 4. ```ntfs-3g /dev/sda2 /sda2``` 
 5. ```cd /sda2```
 6. ```chntpw -l SAM``` (liste les users de la machine)
-7. 
+
 ## Déverrouillage du compte Admin
 
 7. ```chntpw -u Administrateur SAM``` --> ```2``` (déverrouille le compte Admin)
