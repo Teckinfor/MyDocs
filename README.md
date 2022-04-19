@@ -14,23 +14,21 @@
 
 ### Rapports
 
-[Rapport sciences appliqué - Labo 1](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo1GroupeC/SciencesAppliNotesLabo1.pdf)
+[Sciences appliquées - Labo 2 : Effet Doppler et câblage](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo2GroupeC/RapportScienceAppliqueeLabo2GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 2](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo2GroupeC/RapportScienceAppliqueeLabo2GroupeC.pdf)
+[Sciences appliquées - Labo 3 : Analyse de signaux](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo3GroupeC/RapportSciencesAppliqueeLabo3GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 3](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo3GroupeC/RapportSciencesAppliqueeLabo3GroupeC.pdf)
+[Sciences appliquées - Labo 4 : Fibroptonic](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo4GroupeC/RapportScienceAppliqueeLabo4GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 4](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo4GroupeC/RapportScienceAppliqueeLabo4GroupeC.pdf)
+[Sciences appliquées - Labo 5 : RS232](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo5GroupeC/RapportScienceAppliqueeLabo5GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 5](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo5GroupeC/RapportScienceAppliqueeLabo5GroupeC.pdf)
+[Sciences appliquées - Labo 6 : Représentation des signaux & analyse de Fourier](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo6GroupeC/RapportScienceAppliqueLabo6GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 6](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo6GroupeC/RapportScienceAppliqueLabo6GroupeC.pdf)
+[Sciences appliquées - Labo 7 : Simulation de la modulation d'amplitude d'un signal analogique](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo7GroupeC/RapportScienceAppliqueeLabo7GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 7](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo7GroupeC/RapportScienceAppliqueeLabo7GroupeC.pdf)
+[Sciences appliquées - Labo 8 : Analyse de signaux radio FM](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo8GroupeC/RapportScienceAppliqueeLabo8GroupeC.pdf)
 
-[Rapport sciences appliqué - Labo 8](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo8GroupeC/RapportScienceAppliqueeLabo8GroupeC.pdf)
-
-[Rapport sciences appliqué - Labo 9](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo9GroupeC/RapportScienceAppliqueeLabo9GroupeC.pdf)
+[Sciences appliquées - Labo 9 : Conversion AN-NA](https://github.com/Teckinfor/MyDocs/blob/main/Scolaire/B1/RapportScienceAppliqueeLabo9GroupeC/RapportScienceAppliqueeLabo9GroupeC.pdf)
 
 ## Bloc 2
 
