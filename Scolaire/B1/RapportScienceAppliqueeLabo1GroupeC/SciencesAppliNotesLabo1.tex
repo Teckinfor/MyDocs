@@ -1,0 +1,176 @@
+%% Type de document et encodage de la police
+\documentclass[a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+
+%% Initialise la taille des pages et des marges
+\usepackage[a4paper, top=3cm, bottom=3cm, left=2cm, right=2cm, marginparwidth=2cm]{geometry}
+
+%% Commandes perso
+\renewcommand{\arraystretch}{1.2} %% row 20% longer
+
+%% Pour les exemples
+\usepackage{mdframed}
+\newmdenv[topline=false, bottomline=false, rightline=false, skipabove=\topsep, skipbelow=\topsep]{example}
+
+%% Pour les diagrammes
+\usepackage{tikz}
+\tikzstyle{incolore} = [rectangle, rounded corners, draw=black, minimum height=1cm, minimum width=3cm, text width=3cm, text centered]
+
+%% Packs utiles
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+\title{Sciences Appliquées Laboratoire 1 --- Analyse de Signaux}
+\author{Grégoire Roumache}
+\date{Mars 2020}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Matériel}
+
+
+
+
+
+\begin{itemize}
+    \item 1 oscilloscope ;
+    \item 1 multimètre + câbles ;
+    \item 1 générateur de fonction ;
+    \item 1 câble coaxial avec connecteurs BNC-BNC.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Rappel Théorique}
+
+
+
+
+
+\begin{itemize}
+\item Expliquer les différentes fonctionnalités de l'oscilloscope.
+\item Expliquer les différentes fonctionnalités du générateur de fonction.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Manipulation Pratique}
+
+
+
+
+
+\begin{enumerate}
+    \item Raccorder le générateur de fonction et l’oscilloscope et faites vérifier par l'enseignant.
+    \item Générer un signal sinusoïdal d'1 khz (d'amplitude max), sans atténuation.
+    \item Visualiser correctement la forme sinusoïdale.
+    \item Prouver que la fréquence est de 1 Khz sur base de l'observation sur l'oscillo.
+    \item À l'aide d'un multimètre mesurer la tension.
+    \item Comparer celle-ci avec l'observation de l'oscilloscope.
+    \item Faire le lien avec les notions théoriques suivantes : Vmax, Veff.
+    \begin{example}
+        \[ V_{eff} = \frac{V_{max}}{\sqrt{2}} \]
+    \end{example}
+    \item Appuyer sur le bouton -20 dB et observer la nouvelle amplitude.
+    \begin{example}
+        \[ \text{[dB]} = 10 \log \frac{P_1}{P_2} \]
+        où \textit{P} est une puissance.
+    \end{example}
+    \item Vérifier les observations avec la théorie (formules).
+    \begin{example}
+        \[
+            10 \log \frac{P_1}{P_2} = -20 \; \text{[dB]}
+            \implies 10^{-2} = \frac{P_1}{P_2}
+            \implies P_1 = \frac{P_2}{100}
+        \]
+
+        Or, on sait que: $ P = U \times I $. Résultats théoriques possibles (avant la manip):
+        \begin{itemize}
+            \item \textit{I} reste contant, la tension est divisée par 100.
+            \item \textit{I} est diminué d'autant que \textit{U}, la tension et le courant sont tous deux divisés par 10.
+        \end{itemize}
+    \end{example}
+    \item Expliquer à quoi sert le bouton "trigger".
+    \item Générer un carré de 2 Mhz, capturer sur l'oscilloscope.
+    \item Descendre la fréquence à 200 Hz.
+    \item Mesurer au multimètre la tension et la comparer avec l'oscilloscope.
+    \item Faire le lien avec les notions théoriques suivantes : Vmax, Veff.
+    \begin{example}
+        \[ V_{eff} = \frac{V_{max}}{\sqrt{2}} \]
+    \end{example}
+    \item Pourquoi est-ce nécessaire de diminuer la fréquence pour mesurer au multimètre ?
+    \begin{example}
+        There are three very good reasons that a multi meter has limited bandwidth,
+        \begin{enumerate}
+            \item It is very difficult to design a meter that can accurately measure higher frequency signals and at the same time be accurate for DC and low frequency voltage and current. This is due to stray capacitive and inductive coupling.
+            \item When measuring DC or low frequency voltages, you don’t want the meter to be influenced by stray radio signals or other RF interference or noise. So it is usually desirable to have a meter with limited bandwidth.
+            \item When measuring high frequencies, you can’t just hook up a meter with random test prods or clip leads. You need special probes, like oscilloscope probes, or matched coupling to a coaxial cable, so the meter has to have coaxial input connectors.
+        \end{enumerate}
+        Besides, you want both peak and RMS readings. This is hard to measure accurately with a simple multimeter for non-sinusoidal waveforms. There are a number of special instruments, including oscilloscopes. But they’re usually not cheap.
+
+        ----------------------------------------
+
+        Commonplace multimeters are not designed for measuring higher-than-commonplace frequencies. AC Frequencies over 500Hz or >kHz values are not commonly used in sinusoidal AC form. Besides, higher frequency voltages/currents such as control signals, digital data, radio signals etc. start to acquire wave-like behaviour rather than electric current per frequency and also have harmonics (that collectively shape their waveform) that are beyond the capabilities of relatively simpler multimeters to measure. They need devices like oscilloscopes, frequency analyzers, spectrum analyzers and other suitable devices to be properly measured.
+
+        Source: \textit{https://www.quora.com/Why-is-the-bandwidth-of-so-many-multimeters-only-50-Hz-to-500-Hz-Is-measuring-a-high-frequency-AC-signal-not-important-these-days}
+    \end{example}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
