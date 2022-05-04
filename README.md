@@ -75,7 +75,8 @@
 
 ## TFE
 
-Publié après la défense orale de celui-ci
+Publié après la défense orale de celui-ci.
+
 (Pour des raisons de droits d'auteur, le code ne sera pas disponible)
 
 # Annexes
