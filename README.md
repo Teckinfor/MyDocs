@@ -75,9 +75,7 @@
 
 ## TFE
 
-Publié le 20/06/2022.
-
-(Pour des raisons de droits d'auteur, le code ne sera pas disponible)
+[Monitoring d'une IaaS Azure au travers de ses ressources, de sa consommation et des outils sécurité](https://github.com/Teckinfor/MyDocs/tree/main/Scolaire/TFE)
 
 # Annexes
 
